@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<p>
+		<h3>Pvt options</h3>
+		PffgV0990V0990Tm40ECbest  , 
+		PffgV1120V1120T025ECbest   ,	 
+		PttV0800V0800T025Etypical  ,	 PttV0800V0800T080Etypical  ,	 PttV0900V0900T025Etypical
+	</p>
+	<center>
+		<table border="4">
+			<thead>
+				<tr>
+					<th>Technology</th>
+					<td><input type="checkbox" name="fname" id="techa" value="gf40">gf40</td>
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Compiler</th>
+					<td><input type="checkbox" value="edlspram" id="lname">edlvspram</td>
+				</tr>
+				<tr>
+					<th>project</th>
+					<td><input type="checkbox" name="email" id="email" value="Ae34221">Ae34221</td>
+					
+				</tr>
+				<tr>
+					<th>Word</th>
+					<td><input type="text" name="age" id="age"></td>
+				</tr>
+				<tr>
+					<th>Bit per word</th>
+					<td><input type="text" name="age" id="agee"></td>
+				</tr>
+				<tr>
+					<th>PVT</th>
+					<td><input type="text" name="age" id="ag"></td>
+				</tr>
+				<tr>
+					<th>redundance</th>
+					<td><input type="text" name="age" id="ag"></td>
+				</tr>
+				<tr id="btna">
+					<td colspan="2"><input type="button" name="button" id="btn" value="Add" onclick="AddRow()"></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table border="4" id="show">
+			<thead>
+				<tr>
+					<th>Compiler Name</th>
+					<th>Technology</th>
+					<th>Project</th>
+					<th>Words</th>
+					<th>bit per Words</th>
+					<th>PVT values</th>
+				</tr>
+			</thead>
+		</table>
+		<button>Submit and order</button>
+	</center>
+	<script>
+		
+		var list1 = [];
+		var list2 = [];
+		var list3 = [];
+		var list4 = [];
+		var list5 = [];
+		var list6 = [];
+
+
+		var n = 1;
+		var x = 0;
+
+		function AddRow(){
+
+			var AddRown = document.getElementById('show');
+			var NewRow = AddRown.insertRow(n);
+
+			list1[x] = document.getElementById("techa").value;
+			list2[x] = document.getElementById("lname").value;
+			list3[x] = document.getElementById("email").value;
+			list4[x] = document.getElementById("age").value;
+			list5[x] = document.getElementById("agee").value;
+			list6[x] = document.getElementById("ag").value;
+
+			var cel1 = NewRow.insertCell(0);
+			var cel2 = NewRow.insertCell(1);
+			var cel3 = NewRow.insertCell(2);
+			var cel4 = NewRow.insertCell(3);
+			var cel5 = NewRow.insertCell(4);
+			var cel6 = NewRow.insertCell(5);
+
+			cel1.innerHTML = list1[x];
+			cel2.innerHTML = list2[x];
+			cel3.innerHTML = list3[x];
+			cel4.innerHTML = list4[x];
+			cel5.innerHTML = list5[x];
+			cel6.innerHTML = list6[x];
+
+			n++;
+			x++;
+		}
+
+	</script>
+</body>
+</html>
